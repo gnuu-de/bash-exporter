@@ -1,4 +1,4 @@
-FROM golang:1.10.1
+FROM golang:1.12
 RUN go get -d -v github.com/gree-gorey/bash-exporter/cmd/bash-exporter
 WORKDIR /go/src/github.com/gree-gorey/bash-exporter/cmd/bash-exporter
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o bash-exporter .
